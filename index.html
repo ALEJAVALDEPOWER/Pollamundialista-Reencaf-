@@ -177,6 +177,15 @@ select option{background:#0a1535;color:#fff;}
     </div>
   </header>
 
+  <!-- BANNER CIERRE -->
+  <div style="background:rgba(252,209,22,.08);border:1px solid rgba(252,209,22,.3);border-radius:16px;padding:16px 20px;margin-bottom:8px;display:flex;align-items:center;gap:14px;">
+    <span style="font-size:28px;">🔒</span>
+    <div>
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:20px;color:var(--amarillo);letter-spacing:1px;">Polla Mundialista Reencafé</div>
+      <div style="font-size:13px;color:var(--muted);margin-top:3px;">Inscripciones cerradas · Revisa aciertos y ranking abajo 👇</div>
+    </div>
+  </div>
+
   <!-- CONFIG BANNER (se muestra si Supabase no está configurado) -->
   <div class="config-banner" id="configBanner">
     ⚙️ <strong>Configuración requerida:</strong> Para activar la base de datos, reemplaza en el código:<br>
@@ -675,20 +684,31 @@ async function loadRanking(){
   const count = document.getElementById('rankingCount');
   let entries = [];
   try {
-    const res = await fetch(SHEETS_URL);
-    if(res.ok){
-      const data = await res.json();
+    const res = await fetch(SHEETS_URL, {
+      method: 'GET',
+      redirect: 'follow',
+    });
+    const text = await res.text();
+    try {
+      const data = JSON.parse(text);
       entries = Array.isArray(data) ? data : [];
+    } catch(e2){
+      console.warn('JSON parse error:', text.substring(0,200));
+      entries = [];
     }
   } catch(e){
+    console.warn('Fetch error:', e);
     entries = JSON.parse(localStorage.getItem('reencafe_local') || '[]');
   }
+  // Siempre renderizar resultados aunque no haya participantes
+  renderResultados();
   allEntries = entries;
   if(count) count.textContent = entries.length + (entries.length === 1 ? ' colaborador participando' : ' colaboradores participando');
   renderParticipantes(entries);
+  renderResultados();
+  renderTopGanadores();
   const si = document.getElementById('searchInput');
   if(si) si.oninput = () => renderParticipantes(allEntries.filter(e => (e.nombre||'').toLowerCase().includes(si.value.toLowerCase())));
-  // Precargar resultados conocidos en el panel admin
 }
 
 
@@ -887,12 +907,4 @@ function renderTopGanadores(){
 
 </script>
 </body>
-</html  <!-- BANNER CIERRE -->
-  <div style="background:rgba(252,209,22,.08);border:1px solid rgba(252,209,22,.3);border-radius:16px;padding:16px 20px;margin-bottom:20px;display:flex;align-items:center;gap:14px;">
-    <span style="font-size:28px;">🔒</span>
-    <div>
-      <div style="font-family:'Bebas Neue',sans-serif;font-size:20px;color:var(--amarillo);letter-spacing:1px;">Polla Mundialista Reencafé</div>
-      <div style="font-size:13px;color:var(--muted);margin-top:3px;">Inscripciones cerradas · Revisa aciertos y ranking abajo 👇</div>
-    </div>
-  </div>
->
+</html>
