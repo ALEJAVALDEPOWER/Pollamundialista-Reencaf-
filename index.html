@@ -444,71 +444,16 @@ select option{background:#0a1535;color:#fff;}
 
 
 
-  <!-- RESULTADOS EN TIEMPO REAL -->
-  <div style="margin-top:32px;padding-bottom:40px;">
+  <!-- RESULTADOS EN TIEMPO REAL — generado dinámicamente -->
+  <div style="margin-top:32px;padding-bottom:40px;" id="resultadosSection">
     <div style="font-family:'Bebas Neue',sans-serif;font-size:28px;color:var(--amarillo);letter-spacing:2px;margin-bottom:16px;">⚽ Resultados del Mundial</div>
+    <div id="resultadosList"></div>
+  </div>
 
-    <!-- Col vs Jordania JUGADO -->
-    <div style="background:rgba(76,175,80,.08);border:1px solid rgba(76,175,80,.3);border-radius:16px;padding:18px 20px;margin-bottom:12px;">
-      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;">
-        <div>
-          <div style="font-size:11px;font-weight:800;color:#4caf50;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px;">✅ JUGADO · Dom 7 Jun</div>
-          <div style="font-size:18px;font-weight:900;color:var(--text);">🇨🇴 Colombia vs 🇯🇴 Jordania</div>
-        </div>
-        <div style="font-family:'Bebas Neue',sans-serif;font-size:48px;color:#4caf50;letter-spacing:4px;">2 - 0</div>
-      </div>
-      <div style="margin-top:8px;font-size:12px;color:var(--muted);">🏆 Ganó Colombia · Amistoso Internacional</div>
-    </div>
-
-    <!-- Col vs Uzbekistán PENDIENTE -->
-    <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:18px 20px;margin-bottom:12px;">
-      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;">
-        <div>
-          <div style="font-size:11px;font-weight:800;color:var(--amarillo);letter-spacing:2px;text-transform:uppercase;margin-bottom:6px;">⏳ PENDIENTE · Mié 17 Jun · 9:00 pm</div>
-          <div style="font-size:18px;font-weight:900;color:var(--text);">🇨🇴 Colombia vs 🇺🇿 Uzbekistán</div>
-        </div>
-        <div style="font-family:'Bebas Neue',sans-serif;font-size:36px;color:var(--muted);letter-spacing:4px;">? - ?</div>
-      </div>
-      <div style="margin-top:8px;font-size:12px;color:var(--muted);">📍 Estadio Azteca · Ciudad de México</div>
-    </div>
-
-    <!-- Col vs RD Congo PENDIENTE -->
-    <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:18px 20px;margin-bottom:12px;">
-      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;">
-        <div>
-          <div style="font-size:11px;font-weight:800;color:var(--amarillo);letter-spacing:2px;text-transform:uppercase;margin-bottom:6px;">⏳ PENDIENTE · Mar 23 Jun · 9:00 pm</div>
-          <div style="font-size:18px;font-weight:900;color:var(--text);">🇨🇴 Colombia vs 🇨🇩 RD Congo</div>
-        </div>
-        <div style="font-family:'Bebas Neue',sans-serif;font-size:36px;color:var(--muted);letter-spacing:4px;">? - ?</div>
-      </div>
-      <div style="margin-top:8px;font-size:12px;color:var(--muted);">📍 Estadio Akron · Guadalajara</div>
-    </div>
-
-    <!-- Col vs Portugal PENDIENTE -->
-    <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:18px 20px;margin-bottom:12px;">
-      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;">
-        <div>
-          <div style="font-size:11px;font-weight:800;color:var(--amarillo);letter-spacing:2px;text-transform:uppercase;margin-bottom:6px;">⏳ PENDIENTE · Sáb 27 Jun · 6:30 pm</div>
-          <div style="font-size:18px;font-weight:900;color:var(--text);">🇨🇴 Colombia vs 🇵🇹 Portugal</div>
-        </div>
-        <div style="font-family:'Bebas Neue',sans-serif;font-size:36px;color:var(--muted);letter-spacing:4px;">? - ?</div>
-      </div>
-      <div style="margin-top:8px;font-size:12px;color:var(--muted);">📍 Hard Rock Stadium · Miami</div>
-    </div>
-
-    <!-- Final y Goleador -->
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:4px;">
-      <div style="background:rgba(252,209,22,.06);border:1px solid rgba(252,209,22,.2);border-radius:16px;padding:18px 20px;">
-        <div style="font-size:11px;font-weight:800;color:var(--amarillo);letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;">🥇 Final del Mundial</div>
-        <div style="font-family:'Bebas Neue',sans-serif;font-size:22px;color:var(--muted);letter-spacing:1px;">Por definir</div>
-        <div style="font-size:11px;color:var(--muted);margin-top:4px;">19 Jul · MetLife Stadium</div>
-      </div>
-      <div style="background:rgba(206,17,38,.06);border:1px solid rgba(206,17,38,.2);border-radius:16px;padding:18px 20px;">
-        <div style="font-size:11px;font-weight:800;color:#ff6b6b;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;">⚽ Goleador Mundial</div>
-        <div style="font-family:'Bebas Neue',sans-serif;font-size:22px;color:var(--muted);letter-spacing:1px;">Por definir</div>
-        <div style="font-size:11px;color:var(--muted);margin-top:4px;">Al finalizar el torneo</div>
-      </div>
-    </div>
+  <!-- TOP GANADORES -->
+  <div style="margin-top:8px;padding-bottom:40px;">
+    <div style="font-family:'Bebas Neue',sans-serif;font-size:28px;color:var(--amarillo);letter-spacing:2px;margin-bottom:16px;">🏆 Top Ganadores</div>
+    <div id="topGanadores"><div style="text-align:center;color:var(--muted);font-size:13px;padding:20px;">Calculando...</div></div>
   </div>
 </div><!-- /wrap -->
 
@@ -520,13 +465,13 @@ const SHEETS_URL = 'https://script.google.com/macros/s/AKfycbw_1fU_7FEfTnGI8KAET
 
 // Resultados reales — actualizar aquí cuando se juegue cada partido
 const RESULTADOS_REALES = {
-  pam:     { marcador: '2-0', ganador: 'Colombia', jugado: true },   // Col vs Jordania ✅
-  p1:      { marcador: '',    ganador: '',           jugado: false },  // Col vs Uzbekistán
-  p2:      { marcador: '',    ganador: '',           jugado: false },  // Col vs RD Congo
-  p3:      { marcador: '',    ganador: '',           jugado: false },  // Col vs Portugal
-  campeon: { valor: '',       jugado: false },                         // Campeón Mundial
-  goleador:{ valor: '',       jugado: false },                         // Goleador Mundial
-  final:   { valor: '',       jugado: false },                         // Final Mundial
+  pam:     { marcador: '2-0', ganador: 'Colombia', jugado: true  },  // Col vs Jordania ✅ Dom 7 Jun
+  p1:      { marcador: '3-1', ganador: 'Colombia', jugado: true  },  // Col vs Uzbekistán ✅ Mié 18 Jun (Muñoz 40', L.Díaz 65', Campaz 90+9')
+  p2:      { marcador: '',    ganador: '',          jugado: false },  // Col vs RD Congo Mar 23 Jun
+  p3:      { marcador: '',    ganador: '',          jugado: false },  // Col vs Portugal Sáb 27 Jun
+  campeon: { valor: '',       jugado: false },                        // Campeón Mundial
+  goleador:{ valor: '',       jugado: false },                        // Goleador Mundial
+  final:   { valor: '',       jugado: false },                        // Final del Mundial
 };
 const SUPABASE_KEY  = 'sb_publishable_VDJlvUCH7GoL86rBUiVtMg_UJothqPR';
 
@@ -806,6 +751,141 @@ function renderParticipantes(entries){
 }
 
 
+
+
+// ══ RENDER RESULTADOS ══
+function renderResultados(){
+  const el = document.getElementById('resultadosList');
+  if(!el) return;
+
+  const partidos = [
+    { key:'pam', local:'🇨🇴 Colombia', visitante:'🇯🇴 Jordania',    fecha:'Dom 7 Jun · 6:00 pm',  lugar:'Amistoso Internacional' },
+    { key:'p1',  local:'🇨🇴 Colombia', visitante:'🇺🇿 Uzbekistán',  fecha:'Mié 18 Jun · 9:00 pm', lugar:'Estadio Ciudad de México · CDMX | Goles: D.Muñoz 40\', L.Díaz 65\', Campaz 90+9\'' },
+    { key:'p2',  local:'🇨🇴 Colombia', visitante:'🇨🇩 RD Congo',    fecha:'Mar 23 Jun · 9:00 pm', lugar:'Estadio Akron · Guadalajara' },
+    { key:'p3',  local:'🇨🇴 Colombia', visitante:'🇵🇹 Portugal',    fecha:'Sáb 27 Jun · 6:30 pm', lugar:'Hard Rock Stadium · Miami' },
+  ];
+
+  let out = '';
+  partidos.forEach(p => {
+    const r = RESULTADOS_REALES[p.key];
+    const jugado = r && r.jugado;
+    const marcador = jugado ? r.marcador : '? - ?';
+    const [g1='?', g2='?'] = jugado ? marcador.split('-').map(s=>s.trim()) : ['?','?'];
+    const color = jugado ? 'rgba(76,175,80,.08)' : 'rgba(255,255,255,.04)';
+    const border = jugado ? 'rgba(76,175,80,.3)' : 'rgba(255,255,255,.08)';
+    const badgeColor = jugado ? '#4caf50' : 'var(--amarillo)';
+    const badge = jugado ? '✅ JUGADO' : '⏳ PENDIENTE';
+    const scoreColor = jugado ? '#4caf50' : 'var(--muted)';
+    const ganadorTxt = jugado ? `🏆 Ganó ${r.ganador}` : '';
+
+    out += `<div style="background:${color};border:1px solid ${border};border-radius:16px;padding:18px 20px;margin-bottom:12px;">
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;">
+        <div style="flex:1;">
+          <div style="font-size:11px;font-weight:800;color:${badgeColor};letter-spacing:2px;text-transform:uppercase;margin-bottom:6px;">${badge} · ${p.fecha}</div>
+          <div style="font-size:17px;font-weight:900;color:var(--text);">${p.local} <span style="color:var(--muted);font-size:13px;">vs</span> ${p.visitante}</div>
+          <div style="font-size:11px;color:var(--muted);margin-top:4px;">📍 ${p.lugar} ${ganadorTxt?'· '+ganadorTxt:''}</div>
+        </div>
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:44px;color:${scoreColor};letter-spacing:4px;flex-shrink:0;">${g1} - ${g2}</div>
+      </div>
+    </div>`;
+  });
+
+  // Final y Goleador
+  const rFin = RESULTADOS_REALES.final;
+  const rGol = RESULTADOS_REALES.goleador;
+  const rCamp = RESULTADOS_REALES.campeon;
+
+  out += `<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:4px;">
+    <div style="background:rgba(252,209,22,.06);border:1px solid rgba(252,209,22,.2);border-radius:16px;padding:18px 20px;">
+      <div style="font-size:11px;font-weight:800;color:var(--amarillo);letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;">🏆 Campeón Mundial</div>
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:22px;color:${rCamp?.jugado?'#4caf50':'var(--muted)'};letter-spacing:1px;">${rCamp?.jugado?rCamp.valor:'Por definir'}</div>
+    </div>
+    <div style="background:rgba(206,17,38,.06);border:1px solid rgba(206,17,38,.2);border-radius:16px;padding:18px 20px;">
+      <div style="font-size:11px;font-weight:800;color:#ff6b6b;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;">⚽ Goleador Mundial</div>
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:20px;color:${rGol?.jugado?'#ff6b6b':'var(--muted)'};letter-spacing:1px;">${rGol?.jugado?rGol.valor:'Por definir'}</div>
+    </div>
+    <div style="background:rgba(26,122,40,.06);border:1px solid rgba(26,122,40,.2);border-radius:16px;padding:18px 20px;grid-column:1/-1;">
+      <div style="font-size:11px;font-weight:800;color:#4caf50;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;">🥇 Final del Mundial · 19 Jul · MetLife Stadium</div>
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:22px;color:${rFin?.jugado?'#4caf50':'var(--muted)'};letter-spacing:1px;">${rFin?.jugado?rFin.valor:'Por definir · Equipos a confirmar'}</div>
+    </div>
+  </div>`;
+
+  el.innerHTML = out;
+}
+
+// ══ TOP GANADORES ══
+function renderTopGanadores(){
+  const el = document.getElementById('topGanadores');
+  if(!el || !allEntries.length){ if(el) el.innerHTML='<div style="text-align:center;color:var(--muted);font-size:13px;padding:20px;">Sin datos aún</div>'; return; }
+
+  function n(s){ if(!s)return''; return s.toString().toLowerCase().trim().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/\s+/g,' '); }
+  function gG(m){ if(!m)return null; const p=m.trim().split('-'); if(p.length!==2)return null; const a=parseInt(p[0]),b=parseInt(p[1]); if(isNaN(a)||isNaN(b))return null; return a>b?'local':b>a?'visitante':'empate'; }
+
+  const rPam=RESULTADOS_REALES.pam, rP1=RESULTADOS_REALES.p1, rP2=RESULTADOS_REALES.p2, rP3=RESULTADOS_REALES.p3;
+  const rC=RESULTADOS_REALES.campeon, rGol=RESULTADOS_REALES.goleador, rFin=RESULTADOS_REALES.final;
+
+  const scored = allEntries.map(e => {
+    let pts=0; const aciertos=[];
+    // PAM
+    if(rPam?.jugado && e.pam){
+      const ePam=e.pam.split(' (')[0].trim();
+      if(n(ePam)===n(rPam.marcador)){pts+=2;aciertos.push('✅ Col-Jor marcador');}
+      else if(n(e.pam).includes(n(rPam.ganador))){pts+=1;aciertos.push('🟡 Col-Jor ganador');}
+    }
+    // P1
+    if(rP1?.jugado && e.p1){
+      if(n(e.p1)===n(rP1.marcador)){pts+=2;aciertos.push('✅ Col-Uzb marcador');}
+      else if(rP1.ganador&&gG(e.p1)===(rP1.ganador==='Colombia'?'local':rP1.ganador==='Empate'?'empate':'visitante')){pts+=1;aciertos.push('🟡 Col-Uzb ganador');}
+    }
+    // P2
+    if(rP2?.jugado && e.p2){
+      if(n(e.p2)===n(rP2.marcador)){pts+=2;aciertos.push('✅ Col-RDC marcador');}
+      else if(rP2.ganador&&gG(e.p2)===(rP2.ganador==='Colombia'?'local':rP2.ganador==='Empate'?'empate':'visitante')){pts+=1;aciertos.push('🟡 Col-RDC ganador');}
+    }
+    // P3
+    if(rP3?.jugado && e.p3){
+      if(n(e.p3)===n(rP3.marcador)){pts+=2;aciertos.push('✅ Col-Por marcador');}
+      else if(rP3.ganador&&gG(e.p3)===(rP3.ganador==='Colombia'?'local':rP3.ganador==='Empate'?'empate':'visitante')){pts+=1;aciertos.push('🟡 Col-Por ganador');}
+    }
+    // Campeón
+    if(rC?.jugado && e.campeon && n(e.campeon)===n(rC.valor)){pts+=3;aciertos.push('✅ Campeón');}
+    // Goleador
+    if(rGol?.jugado && e.goleador && n(e.goleador).includes(n((rGol.valor||'').split(' (')[0]))){pts+=3;aciertos.push('✅ Goleador');}
+    // Final
+    if(rFin?.jugado && e.final){
+      const rT=n(rFin.valor).split(' vs ').map(t=>t.trim());
+      const eT=n(e.final).split(' vs ').map(t=>t.trim());
+      const m=rT.filter(t=>eT.some(et=>et.includes(t)||t.includes(et))).length;
+      if(m===2){pts+=2;aciertos.push('✅ Final exacta');}
+      else if(m===1){pts+=1;aciertos.push('🟡 Un equipo final');}
+    }
+    return {...e, pts, aciertos};
+  }).sort((a,b)=>b.pts-a.pts);
+
+  // Mostrar todos con puntos, o top 10 si hay muchos
+  const mostrar = scored.filter(e=>e.pts>0);
+  if(!mostrar.length){
+    el.innerHTML='<div style="background:rgba(255,255,255,.04);border:1px solid var(--border);border-radius:16px;padding:20px;text-align:center;color:var(--muted);font-size:14px;">Aún no hay aciertos registrados — los resultados se actualizan automáticamente con cada partido</div>';
+    return;
+  }
+
+  let out='<div style="font-size:11px;color:var(--muted);margin-bottom:12px;font-weight:600;">Exacto=2pts · Ganador=1pt · Campeón/Goleador=3pts · Final=2pts</div>';
+  scored.forEach((e,i)=>{
+    if(e.pts===0) return;
+    const med=i===0?'🥇':i===1?'🥈':i===2?'🥉':'#'+(i+1);
+    const bg=i===0?'rgba(252,209,22,.1)':i===1?'rgba(192,192,192,.06)':i===2?'rgba(205,127,50,.06)':'rgba(255,255,255,.03)';
+    const bc=i===0?'rgba(252,209,22,.4)':i===1?'rgba(192,192,192,.3)':i===2?'rgba(205,127,50,.3)':'rgba(255,255,255,.07)';
+    out+=`<div style="display:flex;align-items:center;gap:12px;padding:12px 16px;background:${bg};border:1px solid ${bc};border-radius:12px;margin-bottom:8px;">
+      <span style="font-size:22px;flex-shrink:0;">${med}</span>
+      <div style="flex:1;min-width:0;">
+        <div style="font-size:14px;font-weight:800;color:var(--text);">${e.nombre}</div>
+        <div style="font-size:11px;color:var(--muted);margin-top:2px;">${e.aciertos.join(' · ')||'Sin aciertos aún'}</div>
+      </div>
+      <div style="background:var(--amarillo);color:var(--azul);font-family:'Bebas Neue',sans-serif;font-size:18px;padding:4px 14px;border-radius:20px;flex-shrink:0;">${e.pts} pts</div>
+    </div>`;
+  });
+  el.innerHTML=out;
+}
 
 </script>
 </body>
